@@ -1,2 +1,3 @@
 <h1><%= @cocktail.name %></h1>
  <%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %>
+ <%= link_to "-", cocktail_path(@cocktail), method: :delete, data: { confirm: "sure?"} %>
