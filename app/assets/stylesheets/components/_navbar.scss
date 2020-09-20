@@ -10,14 +10,25 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+.navbar-wagon {
+  justify-content: space-between;
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  background: #f4f6ff;
+  box-shadow: none;
+  .nav-link {
+    color: #292929 !important;
+  }
+}
 
 .navbar-home {
+  justify-content: space-between;
   position: absolute;
   width: 100%;
   background: transparent;
   box-shadow: none;
-  .navbar-wagon-link {
-    color: white;
-    font-weight: bold;
+  .nav-link {
+    color: white !important;
   }
 }
