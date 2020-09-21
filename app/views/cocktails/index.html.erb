@@ -8,7 +8,6 @@
         <% if cocktail.photo.attached? %>
           <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill, class:"img-show" %>
         <% end %>
-        <img src="https://images.pexels.com/photos/1187766/pexels-photo-1187766.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
         <div class="card-product-infos">
           <h2><%= link_to cocktail.name, cocktail_path(cocktail.id) %></h2>
           <p>Product description with <strong>relevant info</strong> only.</p>
