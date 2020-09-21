@@ -1,2 +1,6 @@
-
-
+.banner-index {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), image-url("pic-index.jpg");
+  background-size: cover;
+  background-position: center;
+}
