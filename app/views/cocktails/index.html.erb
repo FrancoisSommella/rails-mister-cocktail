@@ -1,27 +1,18 @@
-<div class="banner">
+<div class="banner-index">
   <h1>All Cocktails</h1>
-  <div class="banner-content text-center">
-    <div class="index-page">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-            <ul class="list-group">
-              <% @cocktails.each do |cocktail| %>
-                <li class="list-group-item">
-                  <div class="card-index">
-                    <img class="card-img" src="pink-cocktail.jpeg" alt="Card image">
-                    <div class="card-img-overlay">
-                      <p class="card-text"><%= link_to cocktail.name, cocktail_path(cocktail.id) %></p>
-                    </div>
-                  </div>
-                </li>
-              <% end %>
-            </ul>
-            <%= link_to "Add a new Cocktail", new_cocktail_path, class: 'btn btn-primary' %>
-          </div>
-        </div>
+
+  <% @cocktails.each do |cocktail| %>
+    <div class="card-product">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-product-infos">
+        <h2><%= link_to cocktail.name, cocktail_path(cocktail.id) %></h2>
+        <p>Product description with <strong>relevant info</strong> only.</p>
       </div>
     </div>
-  </div>
-</div>
+  <% end %>
+
+<!--       <%# if cocktail.photo.attached? %>
+        <%#= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill, class:"img-show" %>
+      <%# end %> -->
+
 
