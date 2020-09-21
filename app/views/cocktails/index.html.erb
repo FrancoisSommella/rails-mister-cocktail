@@ -1,14 +1,19 @@
 <div class="banner">
+  <h1>All Cocktails</h1>
   <div class="banner-content text-center">
     <div class="index-page">
       <div class="container">
         <div class="row">
           <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-            <h1>All Cocktails</h1>
             <ul class="list-group">
               <% @cocktails.each do |cocktail| %>
                 <li class="list-group-item">
-                  <%= link_to cocktail.name, cocktail_path(cocktail.id) %>
+                  <div class="card-index">
+                    <img class="card-img" src="pink-cocktail.jpeg" alt="Card image">
+                    <div class="card-img-overlay">
+                      <p class="card-text"><%= link_to cocktail.name, cocktail_path(cocktail.id) %></p>
+                    </div>
+                  </div>
                 </li>
               <% end %>
             </ul>
