@@ -9,4 +9,14 @@
   background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), image-url("ballantines.jpg");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
+
+.cont-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+  overflow: scroll;
+  padding: 30px;
+}
+
