@@ -36,3 +36,6 @@ yarn-debug.log*
 .yarn-integrity
 .env*
 .env*
+
+# Ignore .env file containing credentials.
+.env*
