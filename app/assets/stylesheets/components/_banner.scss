@@ -38,3 +38,12 @@
 .btn-home:hover:before {
   left: 100%;
 }
+.show-link {
+  font-weight: bold;
+  font-size: 25px;
+  color: rgba(146, 148, 248, 0.8);
+}
+.show-link:hover {
+  text-decoration: none;
+  color: rgb(146, 148, 248);
+}

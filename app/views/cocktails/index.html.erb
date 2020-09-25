@@ -9,7 +9,7 @@
           <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill, class:"img-show" %>
         <% end %>
         <div class="card-product-infos">
-          <h2><%= link_to cocktail.name, cocktail_path(cocktail.id) %></h2>
+          <h2><%= link_to cocktail.name, cocktail_path(cocktail.id), class:"show-link" %></h2>
           <ul>
           <%cocktail.doses.each do |dose|%>
             <li><%= "#{dose.description} of #{dose.ingredient.name}" %></li>
@@ -19,5 +19,4 @@
       </div>
     <% end %>
   </div>
-
 </div>
