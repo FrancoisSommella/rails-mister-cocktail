@@ -1,21 +1,25 @@
 
 <div class="banner cocktail-show">
-  <h1><%= @cocktail.name %></h1>
   <div class = "container">
-    <% if @cocktail.photo.attached? %>
-      <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
-    <% end %>
-    <div class="banner-content">
+  <h1><%= @cocktail.name %></h1>
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+          <% if @cocktail.photo.attached? %>
+            <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+          <% end %>
+        <div class="banner-content">
 
-      <%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %>
-      <%= link_to "💣", cocktail_path(@cocktail), method: :delete, data: { confirm: "sure?"} %>
+          <%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %>
+          <%= link_to "💣", cocktail_path(@cocktail), method: :delete, data: { confirm: "sure?"} %>
+        </div>
+        <ul>
+        <% @cocktail.doses.each do |dose|%>
+          <li><%= "Ingredient : #{dose.description} de #{dose.ingredient.name}" %></li>
+        <% end %>
+        </ul>
+        <%= link_to "Remove", dose_path, method: :delete, data: { confirm: "Are you sure?" }, class:"remove-link" %>
+        <%= link_to  "Back to cocktails", cocktails_path, class:"btn btn-primary" %>
+      </div>
     </div>
-    <ul>
-    <% @cocktail.doses.each do |dose|%>
-      <li><%= "Ingredient : #{dose.description} de #{dose.ingredient.name}" %></li>
-    <% end %>
-    </ul>
-    <%#= link_to "Remove",dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }, class:"remove-link" %>
   </div>
-  <%= link_to  "Back to cocktails", cocktails_path, class:"btn btn-primary" %>
 </div>
