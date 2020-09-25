@@ -1,6 +1,5 @@
 .card-product {
   border-radius: 4px;
-  overflow: hidden;
   height: 120px;
   background-color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -30,6 +29,11 @@
 
 .card-product .card-product-infos {
   padding: 16px;
+}
+
+.card-product-infos {
+  height: 120px;
+  overflow: scroll;
 }
 
 .title-card {
