@@ -10,7 +10,11 @@
         <% end %>
         <div class="card-product-infos">
           <h2><%= link_to cocktail.name, cocktail_path(cocktail.id) %></h2>
-          <p>Product description with <strong>relevant info</strong> only.</p>
+          <ul>
+          <%cocktail.doses.each do |dose|%>
+            <li><%= "#{dose.description} of #{dose.ingredient.name}" %></li>
+          <%end%>
+          </ul>
         </div>
       </div>
     <% end %>
