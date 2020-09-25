@@ -6,5 +6,13 @@
     <%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %>
     <%= link_to "💣", cocktail_path(@cocktail), method: :delete, data: { confirm: "sure?"} %>
   </div>
-
+<!--     <ul>
+    <%# @cocktail.doses.each do |dose|%>
+      <li><%#= "Ingredient : #{dose.description} de #{dose.ingredient.name}" %></li>
+    <%# end %>
+    </ul>
+    <%#= link_to "Remove",dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }, class:"remove-link" %> -->
 </div>
+
+
+
