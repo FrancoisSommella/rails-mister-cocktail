@@ -14,7 +14,7 @@
         </div>
         <ul>
         <% @cocktail.doses.each do |dose|%>
-          <li><%= "Ingredient : #{dose.description} de #{dose.ingredient.name}" %>
+          <li><%= "#{dose.description} of #{dose.ingredient.name}" %>
           <%= link_to "🗑", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }, class:"remove-link" %>
           </li>
         <% end %>
