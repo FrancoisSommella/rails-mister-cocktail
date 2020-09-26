@@ -18,6 +18,16 @@
   }
 }
 
+.cont-show {
+  position: fixed;
+}
+
+.header-show {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 80px;
+}
+
 .cont-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;

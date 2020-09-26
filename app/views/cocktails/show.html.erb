@@ -1,27 +1,35 @@
 
 <div class="banner cocktail-show">
-  <div class = "container">
-  <h1><%= @cocktail.name %></h1>
+  <div class = "container cont-show">
+    <div class="header-show">
+      <h1><%= @cocktail.name %></h1>
+      <%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail), class: 'btn btn-home' %>
+    </div>
     <div class="row">
-      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+
+      <div class="col 8">
+        <div class="card-show">
           <% if @cocktail.photo.attached? %>
             <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
           <% end %>
+        </div>
+      </div>
+
+      <div class="col 4">
         <div class="banner-content">
 
-          <%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %>
-          <%= link_to "🧨", cocktail_path(@cocktail), method: :delete, data: { confirm: "sure?"}, class:"remove-link" %>
+          <%= link_to "Delete cocktail", cocktail_path(@cocktail), method: :delete, data: { confirm: "sure?"}, class:"remove-link" %>
         </div>
         <ul>
         <% @cocktail.doses.each do |dose|%>
           <li><%= "#{dose.description} of #{dose.ingredient.name}" %>
-          <%= link_to "🗑", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }, class:"remove-link" %>
+          <%= link_to "🧨", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }, class:"remove-link" %>
           </li>
         <% end %>
         </ul>
-
         <%= link_to  "Back to cocktails", cocktails_path, class:"btn btn-primary" %>
       </div>
+
     </div>
   </div>
 </div>
