@@ -18,7 +18,6 @@
       <div class="col 4">
         <div class="banner-content">
 
-          <%= link_to "Delete cocktail", cocktail_path(@cocktail), method: :delete, data: { confirm: "sure?"}, class:"remove-link" %>
         </div>
         <ul>
         <% @cocktail.doses.each do |dose|%>
@@ -28,6 +27,7 @@
         <% end %>
         </ul>
         <%= link_to  "Back to cocktails", cocktails_path, class:"btn btn-primary" %>
+        <%= link_to "Delete cocktail", cocktail_path(@cocktail), method: :delete, data: { confirm: "sure?"}, class:"remove-link" %>
       </div>
 
     </div>
