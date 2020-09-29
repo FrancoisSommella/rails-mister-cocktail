@@ -1,5 +1,5 @@
 
-<div class="banner cocktail-show">
+<div class="banner cocktail-show" >
   <div class = "container cont-show">
     <div class="header-show">
       <h1><%= @cocktail.name %></h1>
@@ -7,13 +7,13 @@
     </div>
     <div class="row">
 
-      <div class="col 8">
-        <div class="card-show" style="background-image: url(<%= @cocktail.img_url %>)">
+      <div class="col 8" style="background-image: url(<%= @cocktail.img_url %>); ">
+    <!--     <div class="card-show" style="background-image: url(<%#= @cocktail.img_url %>)">
           <%# if @cocktail.photo.attached? %>
             <%#= cl_image_tag @cocktail.img_url, height: 300, width: 400, crop: :fill %>
           <%# end %>
         </div>
-      </div>
+      </div>  -->
 
       <div class="col 4">
         <div class="banner-content">
