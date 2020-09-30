@@ -4,10 +4,10 @@
 
   <div class="container cont-cards">
     <% @cocktails.each do |cocktail| %>
-      <div class="card-product" style="background-image: url(<%= cocktail.img_url %>)">
-        <%# if cocktail.photo.attached? %>
-          <%#= cl_image_tag cocktail.img_url, height: 300, width: 400, crop: :fill, class:"img-show" %>
-        <%# end %>
+      <div class="card-product">
+        <% if cocktail.photo.attached? %>
+          <%= cl_image_tag cocktail.img_url, height: 300, width: 400, crop: :fill, class:"img-show" %>
+        <% end %>
         <div class="card-product-infos">
           <h2><%= link_to cocktail.name, cocktail_path(cocktail.id), class:"show-link" %></h2>
           <ul>
