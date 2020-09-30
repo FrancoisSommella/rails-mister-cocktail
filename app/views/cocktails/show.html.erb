@@ -10,7 +10,7 @@
       <div class="col 8">
         <div class="card-show">
           <% if @cocktail.photo.attached? %>
-            <%= cl_image_tag @cocktail.img_url, height: 300, width: 400, crop: :fill %>
+            <%= cl_image_tag :photo, as: :file, height: 300, width: 400, crop: :fill %>
           <% end %>
         </div>
       </div>
