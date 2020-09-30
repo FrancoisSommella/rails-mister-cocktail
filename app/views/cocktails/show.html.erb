@@ -10,7 +10,7 @@
       <div class="col 8">
         <div class="card-show">
           <% if @cocktail.photo.attached? %>
-            <%= cl_image_tag @cocktail.img_url, height: 300, width: 400, crop: :fill %>
+            <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
           <% end %>
         </div>
       </div>
@@ -27,7 +27,7 @@
         <% end %>
         </ul>
         <%= link_to  "Back to cocktails", cocktails_path, class:"btn btn-primary" %>
-        <%#= link_to "Edit Cocktail", edit_cocktail_path, class:"btn btn-primary" %>
+        <%= link_to "Edit Cocktail", new_cocktail_path, class:"btn btn-primary" %>
         <%= link_to "Delete cocktail", cocktail_path(@cocktail), method: :delete, data: { confirm: "sure?"}, class:"remove-link" %>
       </div>
 
