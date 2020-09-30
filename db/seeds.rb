@@ -28,7 +28,8 @@ require 'open-uri'
 puts "Cleaning database..."
 Cocktail.destroy_all
 puts "Creating cocktails..."
-COCKTAILS_URL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=m"
+COCKTAILS_URL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
+
 result = JSON.parse(open(COCKTAILS_URL).read)
 
 result["drinks"].each do |data|
@@ -37,7 +38,7 @@ result["drinks"].each do |data|
   new_cocktail.save!
 
   i = 1
-  until i > 30 do
+  until i > 5 do
     ingredient_id = Ingredient.find_by(name: data["strIngredient#{i}"])&.id
     if ingredient_id.present?
       dose = Dose.new(description: data["strMeasure#{i}"],
