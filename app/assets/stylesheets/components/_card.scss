@@ -8,13 +8,16 @@
 }
 
 .card-product img {
-  height: 10%;
-  width: 40%;
-  // object-fit: cover;
+  height: 100%;
+  width: 33%;
+  object-fit: contain;
   border-radius: 8px;
-  // background-size: cover;
+  background-size: cover;
   position: relative;
   overflow: hidden;
+}
+.img-show {
+  border-radius: 8px ;
 }
 
 .card-product h2 {
