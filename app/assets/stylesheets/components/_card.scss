@@ -10,14 +10,11 @@
 .card-product img {
   height: 100%;
   width: 33%;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 8px;
   background-size: cover;
   position: relative;
   overflow: hidden;
-}
-.img-show {
-  border-radius: 8px ;
 }
 
 .card-product h2 {
@@ -39,8 +36,12 @@
 }
 
 .card-product-infos {
-  height: 120px;
+  height: 100%;
+  width: 313px;
   overflow: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .title-card {
