@@ -26,9 +26,12 @@
           </li>
         <% end %>
         </ul>
-        <%= link_to  "Back to cocktails", cocktails_path, class:"btn btn-primary" %>
-        <%= link_to "Edit Cocktail", new_cocktail_path, class:"btn btn-primary" %>
-        <%= link_to "Delete cocktail", cocktail_path(@cocktail), method: :delete, data: { confirm: "sure?"}, class:"remove-link" %>
+        <ul>
+          <li><%= link_to  "Back to cocktails", cocktails_path, class:"btn btn-home" %></li>
+          <li><%= link_to "Edit Cocktail", new_cocktail_path, class:"btn btn-home" %></li>
+          <li><%= link_to "Delete cocktail", cocktail_path(@cocktail), method: :delete, data: { confirm: "sure?"}, class:"btn btn-home" %></li>
+        </ul>
+
       </div>
 
     </div>
