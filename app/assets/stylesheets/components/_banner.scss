@@ -1,12 +1,20 @@
 .banner-index {
-  height: 100vh;
+  height: 100%;
+  width: 100%;
   background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), image-url("pic-index.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  display: flex;
-  justify-content: space-around;
+  align-items: flex-start;
+  position: fixed;
+}
+.cont-all {
+  overflow: scroll;
+  margin-top: 128px;
   align-items: center;
+  h1 {
+    margin-bottom: 40px;
+  }
 }
 
 .btn-home {
