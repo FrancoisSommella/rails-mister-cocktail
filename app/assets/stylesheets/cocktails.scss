@@ -3,13 +3,14 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .cocktail-show {
   height: 100vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  // display: flex;
+  // justify-content: space-around;
+  // align-items: center;
   background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), image-url("showpic");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  align-items: flex-start;
   ul {
     color: white;
   }
@@ -20,12 +21,18 @@
 
 .cont-show {
   position: fixed;
+  margin-top: 128px;
+  h1 {
+    margin-bottom: 40px;
+  }
 }
 
 .header-show {
   display: flex;
+  position: fixed;
   justify-content: space-between;
-  padding-bottom: 80px;
+  margin-top: 16px;
+
 }
 
 .cont-cards {
