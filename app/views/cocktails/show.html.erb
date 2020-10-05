@@ -1,10 +1,13 @@
 
 <div class="banner cocktail-show" >
+  <div class="container header-show">
+    <%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail), class: 'btn btn-home' %>
+    <%= link_to "Edit Cocktail", edit_cocktail_path, class:"btn btn-home" %>
+    <%= link_to "Delete cocktail", cocktail_path(@cocktail), method: :delete, data: { confirm: "sure?"}, class:"btn btn-home" %>
+    <%= link_to  "Back to cocktails", cocktails_path, class:"btn btn-home" %>
+  </div>
   <div class = "container cont-show">
-    <div class="header-show">
       <h1><%= @cocktail.name %></h1>
-      <%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail), class: 'btn btn-home' %>
-    </div>
     <div class="row">
 
       <div class="col 8">
@@ -22,16 +25,10 @@
         <ul>
         <% @cocktail.doses.each do |dose|%>
           <li><%= "#{dose.description} of #{dose.ingredient.name}" %>
-          <%= link_to "🧨", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }, class:"remove-link" %>
+            <%= link_to "🧨", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }, class:"remove-link" %>
           </li>
         <% end %>
         </ul>
-        <ul>
-          <li><%= link_to  "Back to cocktails", cocktails_path, class:"btn btn-home" %></li>
-          <li><%= link_to "Edit Cocktail", edit_cocktail_path, class:"btn btn-home" %></li>
-          <li><%= link_to "Delete cocktail", cocktail_path(@cocktail), method: :delete, data: { confirm: "sure?"}, class:"btn btn-home" %></li>
-        </ul>
-
       </div>
 
     </div>
