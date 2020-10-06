@@ -33,8 +33,8 @@ COCKTAILS_URL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margar
 result = JSON.parse(open(COCKTAILS_URL).read)
 
 result["drinks"].each do |data|
-  new_cocktail = Cocktail.new(name: data["strDrink"],
-    img_url: data["strDrinkThumb"])
+  new_cocktail = Cocktail.new(name: data["strDrink"])
+    # img_url: data["strDrinkThumb"])
   new_cocktail.save!
 
   i = 1
