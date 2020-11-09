@@ -26,9 +26,9 @@ require 'open-uri'
 #            ------
 
 puts "Cleaning database..."
-Cocktail.destroy_all
+# Cocktail.destroy_all
 puts "Creating cocktails..."
-COCKTAILS_URL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
+COCKTAILS_URL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=gin"
 
 result = JSON.parse(open(COCKTAILS_URL).read)
 
